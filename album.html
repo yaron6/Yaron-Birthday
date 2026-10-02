@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álbum — YRN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="album-page">
+  <div class="stars"></div>
+  <header class="topbar">
+    <div class="logo">YRN</div>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a><a href="momentos.html">Momentos</a><a href="album.html" aria-current="page">Álbum</a><a href="cosmos.html">Surpresa</a>
+    </nav>
+    <button id="musicBtn" class="music-btn">♫ <span>Música</span></button>
+  </header>
+  <main>
+    <section class="photo-album" id="album">
+      <div class="album-heading"><p class="eyebrow">AS NOSSAS MEMÓRIAS</p><h1>O nosso álbum</h1><p>Coloca as tuas fotos na pasta <strong>fotos/Ftt</strong> e elas aparecem no coração do Yaron.</p><p class="album-smart-label"><span aria-hidden="true">✦</span> MEMÓRIAS EM ÓRBITA <span class="album-smart-detail">GLOBO 3D</span></p></div>
+      <div class="memory-globe-stage" id="memoryGlobe">
+        <canvas id="memoryGlobeCanvas" role="img" aria-label="Globo 3D com fotografias a flutuar em órbita"></canvas>
+        <span class="globe-photo-count" id="globePhotoCount" aria-live="polite">20 FOTOGRAFIAS</span>
+        <button class="globe-motion-toggle" id="globeMotion" type="button" aria-label="Pausar animação" title="Pausar animação" aria-pressed="false">Ⅱ</button>
+      </div>
+      <h2 class="album-grid-title">Todas as memórias</h2>
+      <div class="album-grid">
+        <div class="album-photo"><img src="fotos/Ftt/1.jpeg" alt="Memória 1"></div>
+        <div class="album-photo"><img src="fotos/Ftt/2.jpeg" alt="Memória 2"></div>
+        <div class="album-photo"><img src="fotos/Ftt/3.jpeg" alt="Memória 3"></div>
+        <div class="album-photo"><img src="fotos/Ftt/4.jpeg" alt="Memória 4"></div>
+        <div class="album-photo"><img src="fotos/Ftt/5.jpeg" alt="Memória 5"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.00.jpeg" alt="Memória 6"></div>
+        <div class="album-photo"><img src="fotos/Ftt/7.jpeg" alt="Memória 7"></div>
+        <div class="album-photo"><img src="fotos/Ftt/6.jpeg" alt="Memória 8"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.00%20%281%29.jpeg" alt="Memória 9"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.00%20%282%29.jpeg" alt="Memória 10"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.00%20%283%29.jpeg" alt="Memória 11"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.01.jpeg" alt="Memória 12"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.01%20%281%29.jpeg" alt="Memória 13"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.01%20%282%29.jpeg" alt="Memória 14"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.02.jpeg" alt="Memória 15"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.02%20%281%29.jpeg" alt="Memória 16"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.02%20%282%29.jpeg" alt="Memória 17"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.02%20%283%29.jpeg" alt="Memória 18"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.03.jpeg" alt="Memória 19"></div>
+        <div class="album-photo"><img src="fotos/Ftt/WhatsApp%20Image%202026-10-01%20at%2021.39.03%20%281%29.jpeg" alt="Memória 20"></div>
+      </div>
+    </section>
+  </main>
+  <audio id="music" src="musica/musica.mp3" loop preload="none"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="globe.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

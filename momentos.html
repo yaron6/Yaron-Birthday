@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentos — YRN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="moments-page">
+  <div class="stars"></div>
+  <header class="topbar">
+    <div class="logo">YRN</div>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a><a href="momentos.html" aria-current="page">Momentos</a><a href="album.html">Álbum</a><a href="cosmos.html">Surpresa</a>
+    </nav>
+    <button id="musicBtn" class="music-btn">♫ <span>Música</span></button>
+  </header>
+  <main>
+    <section class="moments active" id="moments">
+      <div class="moments-stage">
+        <div class="moments-vignette"></div>
+        <div class="raven-poem moments-poem" aria-hidden="true"><span>O CORVO</span>Era uma meia-noite triste, quando, fraco e fatigado,<br>eu lia antigos livros de um saber já esquecido.<br>Ouvi uma batida, lenta, à porta do meu quarto.<br>"É alguém", murmurei. "Apenas alguém, nada mais."<br><br>Mas o corvo entrou, solene, e pousou sobre o meu umbral.<br>Perguntei-lhe pelo amor que perdi, pela esperança distante.<br>E a sombra respondeu, para sempre, no silêncio:<br><strong>Nunca mais.</strong></div>
+        <div class="moment-title">FELIZ ANIVERSÁRIO, YARON <span>♥</span><small>uma história feita de instantes</small></div>
+        <div class="moment-heart cosmic-heart" aria-label="Formação cósmica do coração"><span class="cosmic-cloud cloud-a"></span><span class="cosmic-cloud cloud-b"></span><span class="cosmic-star cosmic-star-a">✦</span><span class="cosmic-star cosmic-star-b">✧</span><span class="cosmic-star cosmic-star-c">·</span><div class="heart-core">♥</div><div class="heart-ring ring-a"></div><div class="heart-ring ring-b"></div><div class="heart-ring ring-c"></div></div>
+        <p class="moments-instruction">Escolhe uma memória para iluminar a nossa história</p>
+        <div class="orbit orbit-1" data-note="Cada momento ao teu lado é especial. É assim que a nossa história ganha luz."><div class="moment-photo"><img src="fotos/Ftt/1.jpeg" alt="Memória 1"></div><p>Cada momento ao teu lado é especial ♥</p></div>
+        <div class="orbit orbit-2" data-note="Tu és a minha história favorita, daquelas que eu escolheria viver outra vez."><div class="moment-photo"><img src="fotos/Ftt/2.jpeg" alt="Memória 2"></div><p>Tu és a minha história favorita</p></div>
+        <div class="orbit orbit-3" data-note="Há um universo inteiro guardado nos nossos pequenos momentos."><div class="moment-photo"><img src="fotos/Ftt/3.jpeg" alt="Memória 3"></div><p>Um universo inteiro para nós</p></div>
+        <div class="orbit orbit-4" data-note="Quero guardar cada sorriso teu como quem guarda uma estrela."><div class="moment-photo"><img src="fotos/Ftt/4.jpeg" alt="Memória 4"></div><p>Quero guardar cada sorriso</p></div>
+        <div class="moment-note" id="momentNote" aria-live="polite"><span>✦</span><p>Uma memória por vez. O coração sabe o caminho.</p></div>
+        <div class="floating-message m1">Meu presente é ter você</div><div class="floating-message m2">Minha pessoa favorita ♥</div><div class="floating-message m3">Sempre ao teu lado</div><div class="floating-message m4">A nossa história continua...</div><div class="floating-message m5">Tu és meu lugar favorito</div><div class="floating-message m6">Te escolheria sempre</div>
+        <a href="index.html" class="moments-close">Voltar</a>
+      </div>
+    </section>
+  </main>
+  <div class="hearts"></div>
+  <audio id="music" src="musica/musica.mp3" loop preload="none"></audio>
+  <script src="app.js"></script>
+</body>
+</html>

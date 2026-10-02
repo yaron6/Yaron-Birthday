@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar — YRN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="create-page">
+  <div class="stars"></div><div class="hearts"></div>
+  <header class="topbar">
+    <div class="logo">YRN</div>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a><a href="momentos.html">Momentos</a><a href="album.html">Álbum</a><a href="cosmos.html">Surpresa</a>
+    </nav>
+    <button id="musicBtn" class="music-btn">♫ <span>Música</span></button>
+  </header>
+  <main class="create-main">
+    <section class="create-panel" aria-labelledby="create-title">
+      <p class="eyebrow">O NÚCLEO ABRIU-SE</p>
+      <div class="create-orb" aria-hidden="true">✦</div>
+      <h1 id="create-title">O que queres criar para o Yaron?</h1>
+      <p class="create-intro">Escolhe uma forma de transformar carinho em uma lembrança.</p>
+      <div class="creation-options">
+        <button class="creation-option" type="button" data-kind="letter"><span>✉</span><strong>Uma carta</strong><small>Palavras para guardar</small></button>
+        <button class="creation-option" type="button" data-kind="message"><span>♥</span><strong>Uma mensagem</strong><small>Um sentimento em poucas linhas</small></button>
+        <button class="creation-option" type="button" data-kind="memory"><span>✦</span><strong>Uma surpresa</strong><small>Algo só de vocês</small></button>
+      </div>
+      <div class="creation-result" id="creationResult" aria-live="polite"><p>Escolhe uma opção para começar.</p></div>
+      <div class="creation-followup" id="creationFollowup" hidden><p class="followup-title" id="followupTitle"></p><div class="followup-options" id="followupOptions"></div></div>
+      <a class="back-link" href="cosmos.html">← Voltar para as estrelas</a>
+    </section>
+  </main>
+  <audio id="music" src="musica/musica.mp3" loop preload="none"></audio>
+  <script src="app.js"></script>
+  <script>
+    const followups = {
+      letter: { title: 'Como queres preparar a carta?', options: [['✉', 'Enviar uma carta aleatória', 'Uma mensagem escolhida para surpreender.'], ['✎', 'Escrever uma carta', 'Coloca as tuas próprias palavras.']] },
+      message: { title: 'Como queres enviar a mensagem?', options: [['✎', 'Escrever uma mensagem', 'Diz exatamente o que sentes.'], ['♥', 'Enviar uma mensagem aleatória', 'Deixa o coração escolher por ti.']] },
+      memory: { title: 'Que lembrança querem compartilhar juntos?', options: [['▣', 'Uma foto', 'Guarda um instante especial.'], ['▶', 'Um vídeo', 'Revive uma memória em movimento.']] }
+    };
+    const followup = document.querySelector('#creationFollowup');
+    const followupTitle = document.querySelector('#followupTitle');
+    const followupOptions = document.querySelector('#followupOptions');
+    const result = document.querySelector('#creationResult p');
+    const whatsappNumber = '258860184449';
+    const randomLetters = [
+      'Yaron, hoje celebro a pessoa incrível que és. Que este novo ciclo traga luz, sonhos realizados e muitos motivos para sorrir. Feliz aniversário! Com carinho, sempre.',
+      'Meu querido Yaron, entre tantos caminhos, a vida ficou mais bonita por ter cruzado contigo. Que nunca te falte amor, coragem e felicidade. Feliz aniversário!',
+      'Yaron, esta carta leva um abraço, um desejo bonito e a certeza de que mereces tudo o que há de melhor. Que o teu dia seja tão especial quanto tu és.',
+      'Feliz aniversário, Yaron! Que cada estrela te lembre dos teus sonhos e que cada novo dia te aproxime da vida que desejas. Estou feliz por celebrar-te.'
+    ];
+    const randomMessages = [
+      'Feliz aniversário, Yaron! Que o teu novo ciclo seja cheio de luz, amor e momentos inesquecíveis.',
+      'Yaron, és uma pessoa muito especial. Que hoje recebas todo o carinho que mereces!',
+      'Que a felicidade te encontre em cada detalhe. Feliz aniversário, Yaron!'
+    ];
+
+    function sendToWhatsApp(choice) {
+      let message;
+      if(choice === 'Enviar uma carta aleatória') {
+        message = randomLetters[Math.floor(Math.random() * randomLetters.length)];
+      } else if(choice === 'Enviar uma mensagem aleatória') {
+        message = randomMessages[Math.floor(Math.random() * randomMessages.length)];
+      } else if(choice === 'Escrever uma carta') {
+        message = 'Olá, Yaron! Quero escrever uma carta especial para ti. Podemos começar por aqui?';
+      } else if(choice === 'Escrever uma mensagem') {
+        message = 'Olá, Yaron! Quero escrever uma mensagem de carinho para ti.';
+      } else if(choice === 'Uma foto') {
+        message = 'Olá, Yaron! Quero compartilhar uma foto de uma lembrança especial nossa.';
+      } else {
+        message = 'Olá, Yaron! Quero compartilhar um vídeo de uma lembrança especial nossa.';
+      }
+      window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    }
+
+    document.querySelectorAll('[data-kind]').forEach(option => {
+      option.addEventListener('click', () => {
+        document.querySelectorAll('[data-kind]').forEach(item => item.classList.remove('chosen'));
+        option.classList.add('chosen');
+        const selected = followups[option.dataset.kind];
+        followupTitle.textContent = selected.title;
+        followupOptions.innerHTML = selected.options.map(([icon, title, description]) => `<button class="followup-option" type="button"><span>${icon}</span><strong>${title}</strong><small>${description}</small></button>`).join('');
+        followup.hidden = false;
+        result.textContent = 'Agora escolhe como queres continuar.';
+        followupOptions.querySelectorAll('button').forEach(choice => choice.addEventListener('click', () => {
+          followupOptions.querySelectorAll('button').forEach(item => item.classList.remove('chosen'));
+          choice.classList.add('chosen');
+          const choiceTitle = choice.querySelector('strong').textContent;
+          result.textContent = `${choiceTitle} selecionado. A abrir o WhatsApp...`;
+          sendToWhatsApp(choiceTitle);
+        }));
+      });
+    });
+  </script>
+</body>
+</html>

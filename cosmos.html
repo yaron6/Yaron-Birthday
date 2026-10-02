@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa — YRN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cosmos-page">
+  <div class="stars"></div><div class="hearts"></div>
+  <header class="topbar">
+    <div class="logo">YRN</div>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a><a href="momentos.html">Momentos</a><a href="album.html">Álbum</a><a href="cosmos.html" aria-current="page">Surpresa</a>
+    </nav>
+    <button id="musicBtn" class="music-btn">♫ <span>Música</span></button>
+  </header>
+  <main>
+    <section class="cosmos standalone-cosmos" id="cosmos">
+      <div class="cosmos-bg"></div>
+      <div class="raven-poem" aria-hidden="true"><span>O CORVO</span>Era uma meia-noite triste, quando, fraco e fatigado,<br>eu lia antigos livros de um saber já esquecido.<br>Ouvi uma batida, lenta, à porta do meu quarto.<br>"É alguém", murmurei. "Apenas alguém, nada mais."<br><br>Mas o corvo entrou, solene, e pousou sobre o meu umbral.<br>Perguntei-lhe pelo amor que perdi, pela esperança distante.<br>E a sombra respondeu, para sempre, no silêncio:<br><strong>Nunca mais.</strong></div>
+      <div class="cosmos-content"><p class="eyebrow">A NOSSA SURPRESA</p><h1 class="cosmos-title">Entre estrelas e constelações</h1><p class="cosmos-subtitle">Surgiu o Yaron</p><p>Um universo criado para guardar este momento.</p>
+        <a class="cosmos-orbit" href="criar.html" aria-label="Tocar no núcleo Yaron e criar uma surpresa"><span class="orbit-star star-one">✦</span><span class="orbit-star star-two">✦</span><span class="orbit-star star-three">✦</span><span class="orbit-name">Yaron</span><span class="touch-pulse">toca aqui</span></a>
+        <p class="reveal-hint">Escolhe uma constelação para descobrir uma mensagem</p>
+        <div class="constellations"><button class="constellation-card" type="button" data-message="No equilíbrio dos teus dias, existe uma beleza que faz tudo parecer no lugar certo."><div class="constellation-art libra">♎</div><h3>Libra</h3><span>Equilíbrio • Harmonia • Conexão</span></button><button class="constellation-card" type="button" data-message="Na intensidade do teu coração existe uma força rara: a de tornar cada momento inesquecível."><div class="constellation-art scorpio">♏</div><h3>Escorpião</h3><span>Intensidade • Mistério • Paixão</span></button></div>
+        <div class="constellation-message" id="constellationMessage" aria-live="polite"><span>✦</span><p>O teu universo começa quando escolhes uma estrela.</p></div>
+        <button id="birthdayBtn" class="secondary-btn">Revelar a surpresa</button>
+      </div>
+    </section>
+  </main>
+  <div id="birthdayModal" class="modal"><div class="modal-card birthday-card"><button class="close" data-close>×</button><div class="heart">♥</div><p class="eyebrow">HOJE É O SEU DIA</p><h2>Feliz aniversário para o Yaron!</h2><p>Que o seu novo ciclo seja cheio de luz, amor, sonhos realizados e momentos que valham a pena guardar.</p><div class="big-date">03.10.2026</div><button id="whatsappBtn" class="whatsapp-btn" type="button">Enviar pelo WhatsApp</button><button class="primary-btn" data-close>Continuar a celebrar</button></div></div>
+  <audio id="music" src="musica/musica.mp3" loop preload="none"></audio>
+  <script src="app.js"></script>
+</body>
+</html>

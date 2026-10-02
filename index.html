@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YRN — Birthday Love Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+
+  <section id="fingerprintGate" class="fingerprint-gate">
+    <div class="scan-particles"></div>
+    <div class="fingerprint-panel">
+      <div class="security-label">YRN • PRIVATE EXPERIENCE</div>
+      <div class="fingerprint-icon" id="fingerprintIcon" role="button" tabindex="0" aria-label="Toque para desbloquear">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M60 17c-22 0-40 18-40 40 0 11 4 21 11 29"/>
+          <path d="M60 27c-17 0-30 13-30 30 0 9 3 17 8 23"/>
+          <path d="M60 37c-11 0-20 9-20 20 0 7 2 12 6 17"/>
+          <path d="M60 47c-6 0-10 4-10 10 0 9 3 17 2 26"/>
+          <path d="M60 17c22 0 40 18 40 40 0 8-2 15-5 22"/>
+          <path d="M60 27c17 0 30 13 30 30 0 8-2 15-6 21"/>
+          <path d="M60 37c11 0 20 9 20 20 0 12-7 20-7 31"/>
+          <path d="M60 47c6 0 10 4 10 10 0 13-7 22-7 34"/>
+          <path d="M38 80c3 9 8 15 14 20"/>
+          <path d="M82 80c-3 9-8 15-14 20"/>
+          <path d="M45 63c0 16 7 25 15 36"/>
+          <path d="M75 63c0 16-7 25-15 36"/>
+        </svg>
+        <span class="scan-line"></span>
+      </div>
+      <h1>Acesso especial</h1>
+      <p id="fingerprintStatus">Toque na impressão digital<br>para entrar na experiência</p>
+      <button id="fingerprintBtn">TOCAR PARA DESBLOQUEAR</button>
+      <div class="secure-dots"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </section>
+
+  <div class="stars"></div>
+  <div class="hearts"></div>
+
+  <header class="topbar">
+    <div class="logo">YRN</div>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="momentos.html">Momentos</a>
+      <a href="album.html">Álbum</a>
+      <a href="cosmos.html">Surpresa</a>
+    </nav>
+    <button id="musicBtn" class="music-btn">♫ <span>Música</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">UMA EXPERIÊNCIA FEITA COM AMOR</p>
+        <h1>Para uma pessoa<br><span>muito especial</span></h1>
+        <p class="intro">Uma pequena viagem por memórias, sentimentos e pelo universo.</p>
+
+        <div class="countdown" id="countdown">
+          <div><strong id="days">00</strong><small>DIAS</small></div>
+          <div><strong id="hours">00</strong><small>HORAS</small></div>
+          <div><strong id="minutes">00</strong><small>MIN</small></div>
+          <div><strong id="seconds">00</strong><small>SEG</small></div>
+        </div>
+
+        <p class="date">03 • OUTUBRO • 2026</p>
+        <div class="hero-actions"><a href="cosmos.html" class="primary-btn">Surpreender a pessoa <span>→</span></a><a href="momentos.html" class="secondary-btn">Momentos <span>✦</span></a></div>
+      </div>
+    </section>
+
+    <section class="home-paths" aria-labelledby="paths-title">
+      <div class="home-paths-heading">
+        <p class="eyebrow">A TUA VIAGEM COMEÇA AQUI</p>
+        <h2 id="paths-title">Escolhe um caminho</h2>
+        <p>Cada parte guarda uma maneira diferente de celebrar o Yaron.</p>
+      </div>
+      <div class="path-grid">
+        <a class="path-card path-card-pink" href="momentos.html"><span class="path-number">01</span><span class="path-icon">♥</span><h3>Viver os momentos</h3><p>Revê os instantes que fizeram esta história crescer.</p><span class="path-link">Explorar momentos →</span></a>
+        <a class="path-card path-card-gold" href="album.html"><span class="path-number">02</span><span class="path-icon">✦</span><h3>Guardar memórias</h3><p>Entra no álbum e deixa cada fotografia falar.</p><span class="path-link">Abrir o álbum →</span></a>
+        <a class="path-card path-card-violet" href="cosmos.html"><span class="path-number">03</span><span class="path-icon">♒</span><h3>Descobrir a surpresa</h3><p>Segue as estrelas até à mensagem que preparei.</p><span class="path-link">Seguir as estrelas →</span></a>
+      </div>
+    </section>
+
+
+    <section class="moments" id="moments">
+      <div class="moments-stage">
+        <div class="moments-vignette"></div>
+        <div class="moment-title">FELIZ ANIVERSÁRIO, YARON <span>♥</span></div>
+        <div class="moment-heart">
+          <div class="heart-core">♥</div>
+          <div class="heart-ring ring-a"></div>
+          <div class="heart-ring ring-b"></div>
+          <div class="heart-ring ring-c"></div>
+        </div>
+
+        <div class="orbit orbit-1">
+          <div class="moment-photo"><img src="fotos/Ftt/1.jpeg" alt=""></div>
+          <p>Cada momento ao teu lado é special ♥</p>
+        </div>
+        <div class="orbit orbit-2">
+          <div class="moment-photo"><img src="fotos/Ftt/2.jpeg" alt=""></div>
+          <p>Tu és a minha história favorita</p>
+        </div>
+        <div class="orbit orbit-3">
+          <div class="moment-photo"><img src="fotos/Ftt/3.jpeg" alt=""></div>
+          <p>Um universo inteiro para nós</p>
+        </div>
+        <div class="orbit orbit-4">
+          <div class="moment-photo"><img src="fotos/Ftt/4.jpeg" alt=""></div>
+          <p>Quero guardar cada sorriso</p>
+        </div>
+
+        <div class="floating-message m1">Meu presente é ter você</div>
+        <div class="floating-message m2">Minha pessoa favorita ♥</div>
+        <div class="floating-message m3">Sempre ao teu lado</div>
+        <div class="floating-message m4">A nossa história continua...</div>
+        <div class="floating-message m5">Tu és meu lugar favorito</div>
+        <div class="floating-message m6">Te escolheria sempre</div>
+
+        <button id="closeMoments" class="moments-close">Voltar</button>
+      </div>
+    </section>
+    
+    <section class="photo-album" id="album">
+      <div class="album-heading">
+        <p class="eyebrow">AS NOSSAS MEMÓRIAS</p>
+        <h2>O nosso álbum</h2>
+        <p>Coloca as tuas fotos na pasta <strong>fotos/Ftt</strong> e elas aparecem aqui.</p>
+      </div>
+      <div class="album-grid">
+        <div class="album-photo"><img src="fotos/Ftt/1.jpeg" alt="Memória 1"></div>
+        <div class="album-photo"><img src="fotos/Ftt/2.jpeg" alt="Memória 2"></div>
+        <div class="album-photo"><img src="fotos/Ftt/3.jpeg" alt="Memória 3"></div>
+        <div class="album-photo"><img src="fotos/Ftt/4.jpeg" alt="Memória 4"></div>
+        <div class="album-photo"><img src="fotos/Ftt/5.jpeg" alt="Memória 5"></div>
+        <div class="album-photo"><img src="fotos/Ftt/6.jpeg" alt="Memória 6"></div>
+        <div class="album-photo"><img src="fotos/Ftt/7.jpeg" alt="Memória 7"></div>
+        <div class="album-photo"><img src="fotos/Ftt/8.jpeg" alt="Memória 8"></div>
+      </div>
+    </section>
+
+    <section class="cosmos" id="cosmos">
+      <div class="cosmos-bg"></div>
+      <div class="raven-poem" aria-hidden="true">
+        <span>O CORVO</span>
+        Era uma meia-noite triste, quando, fraco e fatigado,<br>
+        eu lia antigos livros de um saber já esquecido.<br>
+        Ouvi uma batida, lenta, à porta do meu quarto.<br>
+        "É alguém", murmurei. "Apenas alguém, nada mais."<br><br>
+        Mas o corvo entrou, solene, e pousou sobre o meu umbral.<br>
+        Perguntei-lhe pelo amor que perdi, pela esperança distante.<br>
+        E a sombra respondeu, para sempre, no silêncio:<br>
+        <strong>Nunca mais.</strong>
+      </div>
+      <div class="cosmos-content">
+        <p class="eyebrow">A NOSSA SURPRESA</p>
+        <h2>Entre estrelas e constelações</h2>
+        <p>Um universo criado para guardar este momento.</p>
+
+        <div class="constellations">
+          <div class="constellation-card">
+            <div class="constellation-art libra">♎</div>
+            <h3>Libra</h3>
+            <span>Equilíbrio • Harmonia • Conexão</span>
+          </div>
+          <div class="constellation-card">
+            <div class="constellation-art scorpio">♏</div>
+            <h3>Escorpião</h3>
+            <span>Intensidade • Mistério • Paixão</span>
+          </div>
+        </div>
+
+        <button id="birthdayBtn" class="secondary-btn">Ver surpresa</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="birthdayModal" class="modal">
+    <div class="modal-card birthday-card">
+      <button class="close" data-close>×</button>
+      <div class="heart">♥</div>
+      <p class="eyebrow">HOJE É O SEU DIA</p>
+      <h2>Feliz aniversário para o Yaron!</h2>
+      <p>Que o seu novo ciclo seja cheio de luz, amor, sonhos realizados e momentos que valham a pena guardar.</p>
+      <div class="big-date">03.10.2026</div>
+      <button id="whatsappBtn" class="whatsapp-btn" type="button">Enviar pelo WhatsApp</button>
+      <button class="primary-btn" data-close>Continuar a celebrar</button>
+    </div>
+  </div>
+
+  <audio id="music" src="musica/musica.mp3" loop preload="none"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
